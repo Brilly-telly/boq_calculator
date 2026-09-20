@@ -107,10 +107,10 @@ else:
 st.markdown("---")
 st.subheader("📄 Export Bill of Quantities Report")
 
-# PayFast Credentials (currently Sandbox for testing)
-PAYFAST_URL = "https://sandbox.payfast.co.za/eng/process"  # Use https://www.payfast.co.za/eng/process for live
-MERCHANT_ID = "10000100"       # Sandbox Merchant ID
-MERCHANT_KEY = "46f00ce6944e4"   # Sandbox Merchant Key
+# PayFast Credentials (Sandbox Keys)
+PAYFAST_URL = "https://sandbox.payfast.co.za/eng/process"
+MERCHANT_ID = "10054649"
+MERCHANT_KEY = "lsg950kj7ilne"
 APP_URL = "https://boq-calculator.streamlit.app" 
 
 payfast_data = {
