@@ -108,7 +108,7 @@ st.markdown("---")
 st.subheader("📄 Export Bill of Quantities Report")
 
 # PayFast Credentials (Sandbox Keys)
-PAYFAST_URL = "https://sandbox.payfast.co.za/eng/process"
+PAYFAST_URL = "https://www.payfast.co.za/eng/process"
 MERCHANT_ID = "37228943"
 MERCHANT_KEY = "kf7zabn4qxznp"
 APP_URL = "https://boq-calculator.streamlit.app" 
@@ -122,8 +122,7 @@ payfast_data = {
     "item_name": "BoQ PDF Export & Detailed Report",
 }
 
-checkout_link = f"{PAYFAST_URL}?{urllib.parse.urlencode(payfast_data)}"
-
+payfast_redirect_url = f"{PAYFAST_URL}?{urllib.parse.urlencode(payfast_data)}"
 # Check payment query status from PayFast redirect
 query_params = st.query_params
 payment_status = query_params.get("payment", None)
@@ -151,8 +150,8 @@ if payment_status == "success":
 
 elif payment_status == "cancelled":
     st.warning("⚠️ Payment was cancelled. Please complete payment to unlock your export.")
-    st.link_button("💳 Pay R50.00 to Unlock Report Export", checkout_link, width="stretch")
+    st.link_button("💳 Pay R50.00 to Unlock Report Export", payfast_redirect_url, width="stretch")
 
 else:
     st.info("🔒 Premium Feature: Download your complete BoQ Schedule & Financial Summary for R50.00.")
-    st.link_button("💳 Pay R50.00 with PayFast", checkout_link, width="stretch")
+    st.link_button("💳 Pay R50.00 with PayFast", payfast_redirect_url, width="stretch")
