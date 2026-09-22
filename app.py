@@ -109,8 +109,8 @@ st.subheader("📄 Export Bill of Quantities Report")
 
 # PayFast Credentials (Sandbox Keys)
 PAYFAST_URL = "https://sandbox.payfast.co.za/eng/process"
-MERCHANT_ID = "10054649"
-MERCHANT_KEY = "lsg950kj7ilne"
+MERCHANT_ID = "37228943"
+MERCHANT_KEY = "kf7zabn4qxznp"
 APP_URL = "https://boq-calculator.streamlit.app" 
 
 payfast_data = {
